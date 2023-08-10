@@ -50,7 +50,7 @@ function displayTemperature(response) {
 }
 
 let apiKey = "8b058902e56924ef72769023553cf986";
-let city = "Masvingo";
+let city = "Pretoria";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(displayTemperature);
