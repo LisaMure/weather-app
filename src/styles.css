@@ -13,6 +13,9 @@ li {
   padding: 0;
 }
 
+li ::first-letter {
+  text-transform: capitalize;
+}
 .container {
   max-width: 585px;
   margin: 0 auto;
@@ -53,6 +56,7 @@ li {
   border: 1px solid rgb(44, 44, 63);
   background: transparent;
   margin-top: 17px;
+  text-transform: capitalize;
   transition: all 200ms ease-in-out;
   box-shadow: 2px 2px 2px rgb(44, 44, 63);
 }

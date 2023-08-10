@@ -39,26 +39,26 @@
       <button class="btn btn-success w-100" id="current-location-btn">
         Current Location
       </button>
-      <p class="date" id="current-date"></p>
+      <p class="date">Last updated <span id="current-date"></span></p>
 
       <div class="row main-forecast-frame">
-        <h1 id="default-city"></h1>
+        <h1 id="city"></h1>
         <div class="col main-temp">
-          25<span class="unit">°C </span>
+          <span id="main-temp">25</span><span class="unit">°C </span>
           <br />
           <div class="min-max-temp">
-            <span class="max-temp"> 17°</span> |
-            <span class="min-temp"> 9°</span>
+            <span class="max-temp" id="max-temp"> 17</span>° |
+            <span class="min-temp" id="min-temp"> 9</span>°
           </div>
         </div>
-        <div class="col main-weather-icon">☀️</div>
+        <div class="col main-weather-icon" id="main-weather-icon">☀️</div>
         <div class="col">
           <ul>
             <li class="weather-description" id="weather-description">
               Partly cloudy
             </li>
-            <li class="wind-speed">Wind: 13km/hr</li>
-            <li class="humidity">Humidity: 50%</li>
+            <li>Wind: <span id="wind-speed">13</span>km/hr</li>
+            <li>Humidity: <span id="humidity">50</span>%</li>
           </ul>
         </div>
       </div>
