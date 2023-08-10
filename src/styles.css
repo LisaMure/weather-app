@@ -1,67 +1,23 @@
 h1 {
   text-align: left;
   font-size: 40px;
-
   margin: 10px 5px 5px 5px;
-
   font-weight: bold;
-}
-
-.main-forecast {
-  border: 1px solid grey;
-  text-align: center;
-  width: 550px;
-  margin: 0 auto;
-  margin-top: 60px;
-  background: white;
-  text-transform: capitalize;
-  padding-top: 20px;
-  border-radius: 5px;
-  box-shadow: 2px 2px 2px black;
-}
-
-.temp-new {
-  text-align: left;
-  margin-left: 5px;
-  margin-top: -5px;
-  font-size: 55px;
-  font-weight: lighter;
-}
-
-.degrees {
-  font-size: 25px;
-  position: relative;
-  top: -22px;
-}
-
-.min-max-temp {
-  font-size: 18px;
-  position: relative;
-  left: 10px;
-  top: -5px;
-}
-.icon-new {
-  font-size: 95px;
-  margin-top: -16px;
 }
 
 li {
   list-style: none;
-  font-size: 15px;
+  font-size: 16px;
   margin-left: -25px;
-}
-
-.five-day-forecast {
-  color: rgb(29, 97, 136);
-  margin-left: 10px;
-  font-weight: bold;
+  margin-top: 3px;
+  padding: 0;
 }
 
 .container {
   max-width: 585px;
-  border: 2px solid rgb(100, 94, 116);
   margin: 0 auto;
   margin-top: 15px;
+  border: 2px solid rgb(100, 94, 116);
   border-radius: 10px;
   box-shadow: 5px 5px 5px grey;
   font-family: "Nunito", sans-serif;
@@ -118,11 +74,6 @@ li {
   font-size: 25px;
 }
 
-#weather-icon {
-  display: block;
-  margin: 0 auto;
-}
-
 #current-location-btn {
   position: relative;
   margin: 15px 360px;
@@ -140,48 +91,52 @@ li {
   background: white;
 }
 
-.main-emoji {
-  font-size: 35px;
-  text-align: center;
+.row {
+  margin-bottom: 15px;
+}
+
+.main-forecast-frame {
+  border: 1px solid grey;
+  width: 550px;
   margin: 0 auto;
-  padding: 5px;
+  margin-top: 60px;
+  background: white;
+  text-transform: capitalize;
+  padding-top: 20px;
+  border-radius: 3px;
+  box-shadow: 2px 2px 2px gray;
 }
 
 .main-temp {
-  font-size: 22px;
+  text-align: left;
+  margin-left: 5px;
+  margin-top: -5px;
+  font-size: 55px;
+  font-weight: 250;
+}
+
+.unit {
+  font-size: 25px;
+  position: relative;
+  top: -22px;
+}
+
+.min-max-temp {
+  font-size: 18px;
+  position: relative;
+  left: 10px;
+  top: -5px;
+}
+
+.main-weather-icon {
+  font-size: 95px;
+  margin-top: -16px;
+}
+
+.five-day-forecast {
+  color: rgb(29, 97, 136);
+  margin-left: 10px;
   font-weight: bold;
-  text-align: center;
-  width: 90px;
-  border: 1px solid grey;
-  margin: 0 auto;
-  padding: 5px;
-  background: white;
-}
-
-.min-temp,
-.max-temp {
-  text-align: center;
-  display: inline-block;
-  width: 105px;
-  padding: 10px;
-  border: 1px solid grey;
-  border-radius: 2px;
-  background: white;
-  font-size: 13px;
-}
-
-.max-temp {
-  margin: 15px 20px 15px 165px;
-}
-
-.windSpeed,
-.humidity {
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.row {
-  margin-bottom: 15px;
 }
 
 .card-title {
@@ -191,7 +146,7 @@ li {
   box-shadow: 5px 5px 5px rgb(103, 103, 134);
 }
 
-.emojis {
+.icons {
   text-align: center;
   font-size: 25px;
   margin: 0 auto;
@@ -216,8 +171,4 @@ a {
   text-align: center;
   margin-bottom: 20px;
   margin-top: 5px;
-}
-
-.github-link {
-  text-decoration: underline;
 }

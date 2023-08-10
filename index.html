@@ -41,24 +41,24 @@
       </button>
       <p class="date" id="current-date"></p>
 
-      <div class="row main-forecast">
+      <div class="row main-forecast-frame">
         <h1 id="default-city"></h1>
-        <div class="col temp-new">
-          25<span class="degrees">°C</span>
+        <div class="col main-temp">
+          25<span class="unit">°C </span>
           <br />
           <div class="min-max-temp">
-            <span class="max-temperature"> 17°</span> |
-            <span class="min-temperature"> 9°</span>
+            <span class="max-temp"> 17°</span> |
+            <span class="min-temp"> 9°</span>
           </div>
         </div>
-        <div class="col icon-new">☀️</div>
+        <div class="col main-weather-icon">☀️</div>
         <div class="col">
           <ul>
             <li class="weather-description" id="weather-description">
               Partly cloudy
             </li>
-            <li>Wind 13km/hr</li>
-            <li>Humidity 50%</li>
+            <li class="wind-speed">Wind: 13km/hr</li>
+            <li class="humidity">Humidity: 50%</li>
           </ul>
         </div>
       </div>
@@ -70,7 +70,7 @@
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">MON</h5>
-                <p class="emojis emoji-monday">🌦</p>
+                <p class="icons icon-monday">🌦</p>
                 <p class="temp max-mon">
                   25° <span class="temp min-mon">9°</span>
                 </p>
@@ -83,7 +83,7 @@
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">TUE</h5>
-                <p class="emojis emoji-tuesday">☀</p>
+                <p class="icons icon-tuesday">☀</p>
                 <p class="temp max-tue">
                   21° <span class="temp min-tue">8°</span>
                 </p>
@@ -96,7 +96,7 @@
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">WED</h5>
-                <p class="emojis emoji-wed">🌩</p>
+                <p class="icons icon-wed">🌩</p>
                 <p class="temp max-wed">
                   21° <span class="temp min-wed">7°</span>
                 </p>
@@ -109,7 +109,7 @@
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">THU</h5>
-                <p class="emojis emoji-thurs">🌧</p>
+                <p class="icons icon-thurs">🌧</p>
                 <p class="temp max-thu">
                   23° <span class="temp min-thu">10°</span>
                 </p>
@@ -122,7 +122,7 @@
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">FRI</h5>
-                <p class="emojis emoji-friday">🌦</p>
+                <p class="icons icon-friday">🌦</p>
                 <p class="temp max-fri">
                   25° <span class="temp min-fri">10°</span>
                 </p>
@@ -141,7 +141,6 @@
       >
       by Melisa Mureriwa
     </div>
-
     <script src="src/index.js"></script>
   </body>
 </html>
