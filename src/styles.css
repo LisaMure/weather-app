@@ -36,7 +36,7 @@ li {
 
 .forecast {
   float: left;
-  margin-top: 18px;
+  margin-top: 25px;
   font-size: 20px;
   margin-bottom: 0;
   font-weight: bold;
@@ -45,21 +45,26 @@ li {
 
 .date {
   position: relative;
+  top: 55px;
+  left: -157px;
   font-size: 13px;
-  margin-top: -60px;
-  margin-bottom: 40px;
 }
 
-.enter-city {
+.enter-city,
+.search-btn {
   display: inline-block;
+  position: relative;
+  top: -12px;
+  transition: all 200ms ease-in-out;
+}
+.enter-city {
   margin-left: 140px;
+  margin-top: -10px;
   padding: 3px 12px;
   border-radius: 10px;
   border: 1px solid rgb(44, 44, 63);
   background: transparent;
-  margin-top: 17px;
   text-transform: capitalize;
-  transition: all 200ms ease-in-out;
   box-shadow: 2px 2px 2px rgb(44, 44, 63);
 }
 
@@ -68,11 +73,9 @@ li {
 }
 
 .search-btn {
-  display: inline-block;
   border: transparent;
   background: transparent;
   font-size: 20px;
-  transition: all 200ms ease-in-out;
   cursor: pointer;
 }
 
@@ -82,14 +85,15 @@ li {
 
 #current-location-btn {
   position: relative;
-  margin: 15px 360px;
+  top: -15px;
+  margin: 15px 360px 10px;
   max-width: 150px;
   border-radius: 10px;
   border: 1px solid rgb(44, 44, 63);
   background: rgb(29, 97, 136);
   transition: all 200ms ease-in-out;
   cursor: pointer;
-  padding: 5px;
+  padding: 3px 12px;
 }
 
 #current-location-btn:hover {
@@ -105,7 +109,7 @@ li {
   border: 1px solid grey;
   width: 548px;
   margin: 0 auto;
-  margin-top: 60px;
+  margin-top: 5px;
   background: white;
   padding-top: 20px;
   border-radius: 3px;
