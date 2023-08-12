@@ -44,7 +44,11 @@
       <div class="row main-forecast-row main-forecast-frame">
         <h1 id="city"></h1>
         <div class="col main-temp">
-          <span id="main-temp"></span><span class="unit">°C </span>
+          <span id="main-temp"></span
+          ><span class="unit"
+            >°<a href="#" id="celcius-link" class="active">C</a>|
+            <a href="#" id="fahrenheit-link">F</a></span
+          >
           <br />
           <div class="min-max-temp">
             <span class="max-temp" id="max-temp"> </span>° |
@@ -67,7 +71,7 @@
       </div>
       <hr />
       <p class="five-day-forecast">5 Day Weather Forecast</p>
-      <div class="row row-cols-1 row-cols-5">
+      <div class="row row-cols-1 row-cols-5 mb-3">
         <div class="col monday">
           <div class="card h-100">
             <div class="card">

@@ -126,6 +126,14 @@ li {
   top: -22px;
 }
 
+.unit .active {
+  color: black;
+  cursor: default;
+}
+.unit .active:hover {
+  text-decoration: none;
+}
+
 .min-max-temp {
   font-size: 16px;
   position: relative;

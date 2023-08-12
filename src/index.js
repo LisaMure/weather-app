@@ -31,6 +31,7 @@ function formatDay(timestamp) {
 }
 
 function displayTemperature(response) {
+  celciusTemperature = response.data.main.temp;
   let mainTemperature = document.querySelector("#main-temp");
   mainTemperature.innerHTML = Math.round(response.data.main.temp);
   let minimumTemperature = document.querySelector("#min-temp");
@@ -64,10 +65,35 @@ function searchCity(city) {
 function submitForm(event) {
   event.preventDefault();
   let cityInput = document.querySelector("#enter-city-input");
-  search(cityInput.value);
+  searchCity(cityInput.value);
 }
 
-searchCity("Pretoria");
+function convertToFahrenheit(event) {
+  event.preventDefault();
+  let mainTemperature = document.querySelector("#main-temp");
+  celciusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
+  mainTemperature.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function convertToCelcius(event) {
+  event.preventDefault();
+  celciusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let mainTemperature = document.querySelector("#main-temp");
+  mainTemperature.innerHTML = Math.round(celciusTemperature);
+}
+
+let celciusTemperature = null;
 
 let cityForm = document.querySelector("#city-form");
-cityForm.addEventListener("submit", searchCity);
+cityForm.addEventListener("submit", submitForm);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", convertToFahrenheit);
+
+let celciusLink = document.querySelector("#celcius-link");
+celciusLink.addEventListener("click", convertToCelcius);
+
+searchCity("Pretoria");
