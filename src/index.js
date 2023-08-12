@@ -1,5 +1,5 @@
-function formatDate(timestamp) {
-  let date = new Date(timestamp);
+function formatDate(newDate) {
+  let date = new Date(newDate);
   let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
@@ -20,14 +20,6 @@ function formatDate(timestamp) {
   ];
   let day = days[date.getDay()];
   return `${day}, ${hours}:${minutes}`;
-}
-
-function formatDay(timestamp) {
-  let date = new Date(timestamp * 1000);
-  let day = date.getDay();
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-
-  return days[day];
 }
 
 function displayTemperature(response) {
