@@ -85,6 +85,21 @@ function convertToCelcius(event) {
   mainTemperature.innerHTML = Math.round(celciusTemperature);
 }
 
+function searchLocation(position) {
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+  let apiKey = "8b058902e56924ef72769023553cf986";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function displayLocationWeather(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchLocation);
+}
+let currentLocationBtn = document.querySelector("#current-location-btn");
+currentLocationBtn.addEventListener("click", displayLocationWeather);
+
 let celciusTemperature = null;
 
 let cityForm = document.querySelector("#city-form");
