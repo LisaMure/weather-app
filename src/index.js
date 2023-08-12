@@ -55,8 +55,19 @@ function displayTemperature(response) {
   weatherIcon.setAttribute("alt", response.data.weather[0].description);
 }
 
-let apiKey = "8b058902e56924ef72769023553cf986";
-let city = "Pretoria";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+function searchCity(city) {
+  let apiKey = "8b058902e56924ef72769023553cf986";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
 
-axios.get(apiUrl).then(displayTemperature);
+function submitForm(event) {
+  event.preventDefault();
+  let cityInput = document.querySelector("#enter-city-input");
+  search(cityInput.value);
+}
+
+searchCity("Pretoria");
+
+let cityForm = document.querySelector("#city-form");
+cityForm.addEventListener("submit", searchCity);
