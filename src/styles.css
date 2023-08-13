@@ -125,7 +125,7 @@ li {
 }
 
 .unit {
-  font-size: 25px;
+  font-size: 22px;
   position: relative;
   top: -22px;
 }
@@ -133,6 +133,7 @@ li {
 .unit .active {
   color: black;
   cursor: default;
+  text-decoration: none;
 }
 .unit .active:hover {
   text-decoration: none;
