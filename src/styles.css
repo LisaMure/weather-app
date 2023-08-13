@@ -165,14 +165,14 @@ li {
 }
 
 .icons {
-  text-align: center;
-  font-size: 25px;
+  display: block;
   margin: 0 auto;
+  margin-left: -12px;
 }
 
-.temp {
+.forecast-temp {
   text-align: center;
-  word-spacing: 3px;
+  word-spacing: 5px;
   font-size: 15px;
 }
 
@@ -181,12 +181,17 @@ li {
   color: rgb(44, 44, 63);
 }
 
-a {
-  text-decoration: none;
+.col-3 {
+  flex: 0 0 auto;
+  width: 20%;
 }
 
 .github {
   text-align: center;
   margin-bottom: 20px;
   margin-top: 5px;
+}
+
+.github a {
+  text-decoration: none;
 }

@@ -89,6 +89,41 @@ function displayLocationWeather(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["MON", "TUE", "WED", "THU", "FRI"];
+  let forecastHTML = `<div class="row">`;
+
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="col-3 mb-3">
+       <div class="card ">
+              <div class="card-body">
+                <h5 class="card-title weather-forecast-date">${day}</h5>
+                <img
+                  src="https://openweathermap.org/img/wn/01n@2x.png"
+                  width="80px"
+                  alt="icon"
+                  class="icons icon-monday"
+                  />
+                <div class ="weather-forecast-temperatures">
+                  <span class="forecast-max-temp"> 25° </span>
+                  <span class="forecast-min-temp"> 9°</span>
+                </div>
+                </div>
+              </div>
+              </div>
+              `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
+}
+
 let currentLocationBtn = document.querySelector("#current-location-btn");
 currentLocationBtn.addEventListener("click", displayLocationWeather);
 
@@ -104,3 +139,5 @@ let celciusLink = document.querySelector("#celcius-link");
 celciusLink.addEventListener("click", convertToCelcius);
 
 searchCity("Pretoria");
+
+displayForecast();
