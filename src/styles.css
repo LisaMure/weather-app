@@ -163,6 +163,7 @@ li {
   text-align: center;
   font-weight: bold;
   box-shadow: 5px 5px 5px rgb(103, 103, 134);
+  text-transform: uppercase;
 }
 
 .icons {
