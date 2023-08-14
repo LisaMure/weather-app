@@ -187,24 +187,29 @@ li {
   text-decoration: none;
 }
 
-@media screen and (max-width: 584px) {
-  .enter-city {
-    position: relative;
-    left: 55px;
-    max-width: 150px;
+@media screen and (max-width: 480px) {
+  .container {
+    width: 100%;
   }
 
-  #current-location-btn {
-    position: relative;
-    left: -165px;
-    top: -10px;
-    margin-bottom: 20px;
+  .enter-city {
+    display: inline-block;
+    max-width: 45%;
+    margin: 55px 0 0;
   }
 
   .search-btn {
     position: relative;
-    left: 55px;
     top: -10px;
+    left: auto;
+  }
+
+  #current-location-btn {
+    position: relative;
+    margin: 10px 157px 30px;
+    top: auto;
+    left: auto;
+    max-width: 45%;
   }
 
   .main-forecast-frame {
