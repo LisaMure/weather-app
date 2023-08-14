@@ -54,7 +54,6 @@ li {
   top: -12px;
   transition: all 200ms ease-in-out;
 }
-
 .enter-city {
   margin-left: 140px;
   margin-top: -10px;
@@ -75,9 +74,6 @@ li {
   background: transparent;
   font-size: 20px;
   cursor: pointer;
-  position: relative;
-  left: 515px;
-  top: -45px;
 }
 
 .search-btn:hover {
@@ -86,7 +82,7 @@ li {
 
 #current-location-btn {
   position: relative;
-  top: -45px;
+  top: -15px;
   margin: 15px 360px 10px;
   max-width: 150px;
   border-radius: 10px;
@@ -102,18 +98,19 @@ li {
   background: white;
 }
 
+.main-forecast-row {
+  margin-bottom: 15px;
+}
+
 .main-forecast-frame {
   border: 1px solid grey;
   width: 548px;
-  margin: 0 -8px;
-  margin-top: -15px;
+  margin: 0 auto;
+  margin-top: 5px;
   background: white;
   padding-top: 20px;
   border-radius: 3px;
   box-shadow: 2px 2px 2px gray;
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 15px;
 }
 
 .main-temp {
@@ -185,64 +182,4 @@ li {
 
 .github a {
   text-decoration: none;
-}
-
-@media screen and (max-width: 584px) {
-  .enter-city {
-    position: relative;
-    left: 55px;
-    max-width: 150px;
-  }
-
-  #current-location-btn {
-    position: relative;
-    left: -165px;
-    top: -10px;
-    margin-bottom: 20px;
-  }
-
-  .search-btn {
-    position: relative;
-    left: 55px;
-    top: -10px;
-  }
-
-  .main-forecast-frame {
-    width: 100%;
-    margin-bottom: 0;
-    padding: 0;
-    padding-top: 20px;
-  }
-
-  .main-temp {
-    font-size: 55px;
-    position: relative;
-    left: 15px;
-  }
-
-  .unit {
-    position: relative;
-    top: -25px;
-    left: -16px;
-  }
-
-  .main-weather-icon {
-    position: relative;
-    top: -10px;
-  }
-
-  li {
-    font-size: 13px;
-    margin-top: 5px;
-  }
-
-  .col-3 {
-    width: 30%;
-  }
-
-  .col {
-    padding: 0;
-    margin: 0;
-    height: 120px;
-  }
 }
