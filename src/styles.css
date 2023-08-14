@@ -9,17 +9,14 @@ li {
   list-style: none;
   font-size: 16px;
   margin-left: -25px;
-  margin-top: 3px;
+  margin-top: 1px;
   padding: 0;
   text-transform: capitalize;
 }
 
-.wind-speed {
-  text-transform: lowercase;
-}
-
 .container {
   max-width: 585px;
+  box-sizing: border-box;
   margin: 0 auto;
   margin-top: 15px;
   border: 2px solid rgb(100, 94, 116);
@@ -120,36 +117,25 @@ li {
   text-align: left;
   margin-left: 5px;
   margin-top: -10px;
-  font-size: 55px;
+  font-size: 70px;
   font-weight: 250;
 }
 
 .unit {
-  font-size: 22px;
+  font-size: 27px;
   position: relative;
-  top: -22px;
-}
-
-.unit .active {
-  color: black;
-  cursor: default;
-  text-decoration: none;
-}
-.unit .active:hover {
-  text-decoration: none;
-}
-
-.min-max-temp {
-  font-size: 16px;
-  position: relative;
-  left: 10px;
-  top: -10px;
+  top: -30px;
+  left: -16px;
 }
 
 .main-weather-icon {
   display: block;
   align-items: center;
   margin-top: -16px;
+}
+
+.wind-speed {
+  text-transform: lowercase;
 }
 
 .five-day-forecast {

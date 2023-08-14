@@ -26,10 +26,6 @@ function displayTemperature(response) {
   celciusTemperature = response.data.main.temp;
   let mainTemperature = document.querySelector("#main-temp");
   mainTemperature.innerHTML = Math.round(response.data.main.temp);
-  let minimumTemperature = document.querySelector("#min-temp");
-  minimumTemperature.innerHTML = Math.round(response.data.main.temp_min);
-  let maximumTemperature = document.querySelector("#max-temp");
-  maximumTemperature.innerHTML = Math.round(response.data.main.temp_max);
   let cityElement = document.querySelector("#city");
   cityElement.innerHTML = response.data.name;
   let weatherDescription = document.querySelector("#weather-description");
@@ -62,23 +58,6 @@ function submitForm(event) {
   searchCity(cityInput.value);
 }
 
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  let mainTemperature = document.querySelector("#main-temp");
-  celciusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
-  mainTemperature.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-function convertToCelcius(event) {
-  event.preventDefault();
-  celciusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  let mainTemperature = document.querySelector("#main-temp");
-  mainTemperature.innerHTML = Math.round(celciusTemperature);
-}
-
 function searchLocation(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
@@ -109,9 +88,9 @@ function displayForecast(response) {
 
   weatherForecast.forEach(function (forecastDay, index) {
     if (index < 5) {
-    forecastHTML =
-      forecastHTML +
-      `
+      forecastHTML =
+        forecastHTML +
+        `
       <div class="col-3 mb-3">
        <div class="card ">
               <div class="card-body">
@@ -138,15 +117,14 @@ function displayForecast(response) {
               </div>
               </div>
               `;
-  }
-});
+    }
+  });
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
 
 function getForecast(coordinates) {
-  console.log(coordinates);
   let apiKey = "1a6432c5ca7b6f9b0bee45c98d54ea71";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
@@ -159,11 +137,5 @@ let celciusTemperature = null;
 
 let cityForm = document.querySelector("#city-form");
 cityForm.addEventListener("submit", submitForm);
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", convertToFahrenheit);
-
-let celciusLink = document.querySelector("#celcius-link");
-celciusLink.addEventListener("click", convertToCelcius);
 
 searchCity("Pretoria");
