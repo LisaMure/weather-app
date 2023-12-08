@@ -15,7 +15,7 @@ li {
 }
 
 .container {
-  max-width: 585px;
+  max-width: 600px;
   box-sizing: border-box;
   margin: 0 auto;
   margin-top: 15px;
@@ -32,31 +32,30 @@ li {
 }
 
 .forecast {
-  float: left;
+  /* float: left;
   margin-top: 25px;
   font-size: 20px;
   margin-bottom: 0;
+  font-weight: bold;
+  color: rgb(44, 44, 63); */
+  margin-top: 25px;
+  margin-bottom: 0;
+  font-size: 22px;
   font-weight: bold;
   color: rgb(44, 44, 63);
 }
 
 .date {
-  position: relative;
-  top: 55px;
-  left: -157px;
   font-size: 13px;
 }
 
 .enter-city,
 .search-btn {
-  display: inline-block;
-  position: relative;
-  top: -12px;
+  margin-top: 10px;
   transition: all 200ms ease-in-out;
 }
 .enter-city {
-  margin-left: 140px;
-  margin-top: -10px;
+  margin-top: 10px;
   padding: 3px 12px;
   border-radius: 10px;
   border: 1px solid rgb(44, 44, 63);
@@ -74,23 +73,20 @@ li {
   background: transparent;
   font-size: 20px;
   cursor: pointer;
+  margin-top: 15px !important;
 }
 
 .search-btn:hover {
-  font-size: 25px;
+  color: rgb(29, 97, 136);
 }
 
 #current-location-btn {
-  position: relative;
-  top: -15px;
-  margin: 15px 360px 10px;
-  max-width: 150px;
   border-radius: 10px;
   border: 1px solid rgb(44, 44, 63);
   background: rgb(29, 97, 136);
   transition: all 200ms ease-in-out;
   cursor: pointer;
-  padding: 3px 12px;
+  padding: 5px 15px;
 }
 
 #current-location-btn:hover {
@@ -169,7 +165,7 @@ li {
   color: rgb(44, 44, 63);
 }
 
-.col-3 {
+.col-sm-3 {
   flex: 0 0 auto;
   width: 20%;
 }
@@ -182,4 +178,99 @@ li {
 
 .github a {
   text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  body {
+    margin-bottom: 50px;
+    margin-top: 80px;
+  }
+
+  .container {
+    width: 90% !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+
+  .weather-header p {
+    text-align: center;
+  }
+
+  .forecast {
+    font-size: 25px;
+  }
+
+  .date {
+    font-size: 15px;
+  }
+
+  .enter-city {
+    /* width: 70%; */
+    width: 250px;
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 5px;
+  }
+
+  .btn-col {
+    display: block !important;
+    margin: 0 auto !important;
+  }
+
+  .current-location-btn {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .search-btn {
+    display: none;
+  }
+
+  .main-forecast-frame {
+    width: 98%;
+    padding-bottom: 15px;
+  }
+
+  .main-forecast-frame h1,
+  .main-temp,
+  .main-weather-icon,
+  li {
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .main-forecast-frame h1 {
+    font-size: 42px;
+  }
+
+  .main-forecast-frame .description {
+    border: 1px solid gray;
+    margin: 10px auto;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    width: 85%;
+    box-shadow: 2px 2px 2px rgb(179, 191, 198);
+  }
+
+  .forecast-temp .row .col-sm-3 {
+    width: 50% !important;
+    margin: 0 auto;
+    margin-bottom: 18px;
+    font-size: 18px;
+  }
+
+  .forecast-temp img {
+    width: 100%;
+  }
+
+  .five-day-forecast {
+    font-size: 20px;
+  }
+
+  .forecast-temp .card-title {
+    font-size: 16px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+  }
 }

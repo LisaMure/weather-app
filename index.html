@@ -27,33 +27,50 @@
   </head>
   <body>
     <div class="container">
-      <p class="forecast">Weather forecast</p>
-      <p class="date">Last updated <span id="current-date"></span></p>
-      <form id="city-form">
-        <input
-          class="enter-city"
-          type="search"
-          placeholder="Enter city"
-          autocomplete="no"
-          id="enter-city-input"
-        />
-        <button class="search-btn" type="submit">
-          <i class="fa fa-search"></i>
-        </button>
-      </form>
-      <button class="btn btn-success w-100" id="current-location-btn">
-        Current Location
-      </button>
-      <div class="row main-forecast-frame">
+      <div class="row mt-3">
+        <div class="col-sm-6">
+          <div class="row weather-header">
+            <p class="forecast">Weather forecast</p>
+            <p class="date">Last updated <span id="current-date"></span></p>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="row">
+            <form id="city-form" class="mb-3 d-flex justify-content-end">
+              <input
+                class="enter-city col-sm-10"
+                type="search"
+                placeholder="Enter city"
+                autocomplete="no"
+                id="enter-city-input"
+              />
+
+              <button class="search-btn m-0 p-0 col-sm-2" type="submit">
+                <i class="fa fa-search"></i>
+              </button>
+            </form>
+            <div class="col-sm-12 mb-4 w-75 btn-col">
+              <button
+                class="btn btn-success current-location-btn"
+                id="current-location-btn"
+              >
+                Current Location
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Mainforecast  -->
+      <div class="row w-100 main-forecast-frame">
         <h1 id="city"></h1>
-        <div class="col main-temp">
+        <div class="col-4 main-temp">
           <span id="main-temp"></span>
           <span class="unit">°C</span>
         </div>
-        <div class="col main-weather-icon">
+        <div class="col-4 main-weather-icon">
           <img src="#" alt="icon" id="main-weather-icon" />
         </div>
-        <div class="col">
+        <div class="col-3">
           <ul>
             <li class="weather-description" id="weather-description"></li>
             <li>
@@ -65,8 +82,9 @@
         </div>
       </div>
       <hr />
+      <!-- Five day forecast -->
       <p class="five-day-forecast">5 Day Weather Forecast</p>
-      <div class="forecast-temp" id="forecast"></div>
+      <div class="forecast-temp row" id="forecast"></div>
     </div>
     <div class="github">
       <a
