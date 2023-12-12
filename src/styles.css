@@ -181,7 +181,7 @@ li {
 @media (max-width: 600px) {
   body {
     margin-bottom: 50px;
-    margin-top: 80px;
+    margin-top: 40px;
   }
 
   .container {
